@@ -12,7 +12,7 @@ In the current study, we evaluated **logistic regression (LR), support vector ma
 
 - Variants Calling
 
-  - Here, we called variants using `bcftools` software. You can also use other tools for variants calling.
+  - Here, we called variants using `bcftools` software and E.coli K-12 strain. MG1655 as reference genome. You can also use other tools for variants calling.
 
 - SNP-matrix 
 
@@ -36,4 +36,5 @@ In the current study, we evaluated **logistic regression (LR), support vector ma
   - One-hot encoding
     - Each allele is encoded into a bianry matrix.
 
-Please refer to the format of "example_file.7z" to prepare your data.
+*Please refer to the format of "example_file.7z" to prepare your data and test the pipeline.*
+*We also provide the final SNPs matrix and phenotypic data for four drugs, which contains 809 E. coli strains. (The sample size is different from the one we used in the paper)*
