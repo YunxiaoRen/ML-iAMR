@@ -7,3 +7,33 @@ In the current study, we evaluated **logistic regression (LR), support vector ma
 
 
 <img src="Fig1-Workflow.png" style="zoom:24%;" />
+
+### Data preprocessing
+
+- Variants Calling
+
+  - Here, we called variants using `bcftools` software. You can also use other tools for variants calling.
+
+- SNP-matrix 
+
+  - We then extracted SNPs variants, reference alleles, and their positions, and merged all isolates based on the positions of reference alleles.
+
+  - The final format of SNP-matrix (N replaces a locus without variation):
+
+    | Sample_name | Position_1 | Position_2 | Position_3 | ...  | Position_n |
+    | ----------- | ---------- | ---------- | ---------- | ---- | ---------- |
+    | Ref_allele  | A          | T          | G          | ...  | C          |
+    | Sample_1    | G          | A          | A          | ...  | T          |
+    | Sample_2    | G          | N          | A          | ...  | T          |
+    | Sample_3    | G          | A          | C          | ...  | G          |
+    | ...         | ...        | ...        | ...        | ...  | ...        |
+    | Sample_m    | T          | A          | A          | ...  | T          |
+
+- Encoding SNP-natrix
+
+  - Label encoding
+    - The A, G, C, T, N in the SNP_matrix were converted to 1, 2, 3, 4, and 0.
+  - One-hot encoding
+    - Each allele is encoded into a bianry matrix.
+
+Please refer to the format of "example_file.7z" to prepare your data.
