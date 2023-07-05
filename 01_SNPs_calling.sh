@@ -48,4 +48,7 @@ done
 ## Position, Reference and Alternate
 for i in $(cat $input_list); do cut -d " " -f 2,3,4 $i.filter.snps.extract.txt >$i.snp; done
 
+## SNP file list
+ls *.snp > snp.list
+
 
